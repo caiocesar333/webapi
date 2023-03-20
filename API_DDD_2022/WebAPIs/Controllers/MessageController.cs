@@ -29,7 +29,7 @@ namespace WebAPIs.Controllers
         [HttpPost("/api/Add")]
         public async Task<List<Notifies>> Add(MessageViewModel message)
         {
-            message.UserId = await RetornarIdUsuarioLogado();
+            message.UserId = await ReturnIdUserLogged();
             var messageMap = _IMapper.Map<Message>(message);
             await _IMessage.Add(messageMap);
             return messageMap.Notitycoes;
