@@ -9,25 +9,23 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
-
 namespace Infrastructure.Repository.Generics
 {
     public class RepositoryGenerics<T> : IGeneric<T>, IDisposable where T : class
     {
         private readonly DbContextOptions<ContextBase> _OptionsBuilder;
 
-
         public RepositoryGenerics()
         {
             _OptionsBuilder = new DbContextOptions<ContextBase>();
         }
+
         public async Task Add(T Objeto)
         {
             using (var data = new ContextBase(_OptionsBuilder))
             {
                 await data.Set<T>().AddAsync(Objeto);
                 await data.SaveChangesAsync();
-
             }
         }
 
@@ -37,7 +35,6 @@ namespace Infrastructure.Repository.Generics
             {
                 data.Set<T>().Remove(Objeto);
                 await data.SaveChangesAsync();
-
             }
         }
 
@@ -46,7 +43,6 @@ namespace Infrastructure.Repository.Generics
             using (var data = new ContextBase(_OptionsBuilder))
             {
                 return await data.Set<T>().FindAsync(Id);
-
             }
         }
 
@@ -55,7 +51,6 @@ namespace Infrastructure.Repository.Generics
             using (var data = new ContextBase(_OptionsBuilder))
             {
                 return await data.Set<T>().ToListAsync();
-
             }
         }
 
@@ -65,7 +60,6 @@ namespace Infrastructure.Repository.Generics
             {
                 data.Set<T>().Update(Objeto);
                 await data.SaveChangesAsync();
-
             }
         }
 
@@ -105,5 +99,3 @@ namespace Infrastructure.Repository.Generics
 
     }
 }
-
-

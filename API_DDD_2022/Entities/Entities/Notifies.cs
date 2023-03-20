@@ -10,51 +10,55 @@ namespace Entities.Entities
     public class Notifies
     {
 
-        public Notifies() 
-        {   
-            
+        public Notifies()
+        {
             Notitycoes = new List<Notifies>();
-
-        }   
-
-        [NotMapped]
-        public string NameProperty { get; set; }
+        }
 
         [NotMapped]
-        public string Message { get; set; }
+        public string NomePropriedade { get; set; }
+
+        [NotMapped]
+        public string mensagem { get; set; }
 
         [NotMapped]
         public List<Notifies> Notitycoes { get; set; }
 
 
-        public bool ValidatePropertyString(string value, string NameProperty)
+        public bool ValidarPropriedadeString(string valor, string nomePropriedade)
         {
-            if (string.IsNullOrWhiteSpace(value) || string.IsNullOrWhiteSpace(NameProperty)) 
+            if (string.IsNullOrWhiteSpace(valor) || string.IsNullOrWhiteSpace(nomePropriedade))
             {
                 Notitycoes.Add(new Notifies
                 {
-                    Message = "Required field",
-                    NameProperty = NameProperty
+                    mensagem = "Campo Obrigatório",
+                    NomePropriedade = nomePropriedade
                 });
+
                 return false;
+
             }
 
             return true;
         }
 
-        public bool ValidatePropertyInt(int value, string NameProperty)
+        public bool ValidarPropriedadeInt(int valor, string nomePropriedade)
         {
-            if ( value < 1 || string.IsNullOrWhiteSpace(NameProperty))
+            if (valor < 1 || string.IsNullOrWhiteSpace(nomePropriedade))
             {
                 Notitycoes.Add(new Notifies
                 {
-                    Message = "Required field",
-                    NameProperty = NameProperty
+                    mensagem = "Campo Obrigatório",
+                    NomePropriedade = nomePropriedade
                 });
+
                 return false;
+
             }
 
             return true;
         }
+
+
     }
 }

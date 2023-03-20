@@ -8,24 +8,25 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
+
     [Table("TB_MESSAGE")]
-    public class Message:Notifies
+    public  class Message: Notifies
     {
         [Column("MSN_ID")]
         public int Id { get; set; }
 
-        [Column("MSN_TITLE")]
+        [Column("MSN_TITULO")]
         [MaxLength(255)]
-        public string Title { get; set; }
+        public string Titulo { get; set; }
 
-        [Column("MSN_ACTIVE")]
-        public bool Active { get; set; }
+        [Column("MSN_ATIVO")]
+        public bool Ativo { get; set; }
 
-        [Column("MSN_DATE_REGISTER")]
-        public DateTime DateRegister { get; set; }
+        [Column("MSN_DATA_CADASTRO")]
+        public DateTime DataCadastro { get; set; }
 
-        [Column("MSN_DATE_UPDATE")]
-        public DateTime DateUpdate { get; set; }
+        [Column("MSN_DATA_ALTERACAO")]
+        public DateTime DataAlteracao { get; set; }
 
         [ForeignKey("ApplicationUser")]
         [Column(Order = 1)]

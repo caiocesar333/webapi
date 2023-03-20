@@ -11,17 +11,18 @@ namespace Infrastructure.Configuration
 {
     public class ContextBase : IdentityDbContext<ApplicationUser>
     {
-        public ContextBase(DbContextOptions<ContextBase> options) : base(options) { }
-        
+        public ContextBase(DbContextOptions<ContextBase> options) : base(options)
+        {
+        }
+
         public DbSet<Message> Message { get; set; }
-    
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer(GetStringConetion());
+                optionsBuilder.UseSqlServer(ObterStringConexao());
                 base.OnConfiguring(optionsBuilder);
             }
         }
@@ -34,10 +35,11 @@ namespace Infrastructure.Configuration
             base.OnModelCreating(builder);
         }
 
-        public string GetStringConetion () 
+
+        public string ObterStringConexao()
         {
-        
-            return "Data Source=localhost\\SQLEXPRESS;Initial Catalog=API_DDD_2022;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
+           return  "Data Source=localhost\\SQLEXPRESS;Initial Catalog=API_DDD_2022;Integrated Security=False;User ID=sa;Password=1234;Connect Timeout=15;Encrypt=False;TrustServerCertificate=False";
         }
+
     }
 }

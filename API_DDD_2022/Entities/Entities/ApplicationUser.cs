@@ -1,4 +1,4 @@
-﻿using Entities.Enum;
+﻿using Entities.Enums;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Entities.Entities
 {
-    public class ApplicationUser : IdentityUser
+    public  class ApplicationUser : IdentityUser
     {
-        [Column ("USR_CPF")]
+        [Column("USR_CPF")]
         public string CPF { get; set; }
 
-        [Column("USR_TYPE")]
-        public TypeUser? Type { get; set; }
+        [Column("USR_TIPO")]
+        public TipoUsuario? Tipo { get; set; }
     }
 }
