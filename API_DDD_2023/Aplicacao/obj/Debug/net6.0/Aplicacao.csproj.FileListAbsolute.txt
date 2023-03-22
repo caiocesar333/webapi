@@ -1,0 +1,17 @@
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Aplicacao.deps.json
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Aplicacao.dll
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Aplicacao.pdb
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Dominio.dll
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Entidades.dll
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Dominio.pdb
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\bin\Debug\net6.0\Entidades.pdb
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.csproj.AssemblyReference.cache
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.AssemblyInfoInputs.cache
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.AssemblyInfo.cs
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.csproj.CoreCompileInputs.cache
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.csproj.CopyComplete
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.dll
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\refint\Aplicacao.dll
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\Aplicacao.pdb
+D:\Programação\WebApi\API_DDD_2023\Aplicacao\obj\Debug\net6.0\ref\Aplicacao.dll
